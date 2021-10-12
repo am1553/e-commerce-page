@@ -1,0 +1,27 @@
+body {
+  font-size: 1rem;
+  font-family: "Kumbh Sans", sans-serif;
+  .orange-text {
+    color: $orange-primary;
+  }
+  .very-dark-blue-text {
+    color: $heading-text-very-dark-blue;
+  }
+  .grayish-blue {
+    color: $grayish-blue;
+  }
+  .white-text {
+    color: $white;
+  }
+  p {
+    color: $body-text-dark-grayish-blue;
+  }
+  h1 {
+    font-size: 1.75rem;
+    padding-bottom: 1.2rem;
+  }
+  h4 {
+    font-size: 0.75rem;
+    padding: 1rem 0 1rem;
+  }
+}

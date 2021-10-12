@@ -1,0 +1,25 @@
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  .left-align {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .discount {
+      background-color: $pale-orange-primary;
+      font-weight: 700;
+      padding: 2px 10px 2px;
+      border-radius: 5px;
+      margin-left: 20px;
+    }
+  }
+  .right-align {
+    p {
+      font-weight: 700;
+      text-decoration: line-through;
+    }
+  }
+}
