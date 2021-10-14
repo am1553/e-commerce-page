@@ -1,6 +1,11 @@
 // // SELECTORS
-
 const menuBtn = document.getElementById("menu_btn");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+// ARRAYS
+const shoeImgList = ["../images/image-product-1.jpg", "../images/image-product-2.jpg", "../images/image-product-3.jpg", "../images/image-product-4.jpg"];
+
 
 // OPEN MENU AND APPLY OVERLAY EFFECT
 menuBtn.addEventListener("click", (e) => {
@@ -29,3 +34,5 @@ menuBtn.addEventListener("click", (e) => {
         overlayEffect.style.display = "none" 
     }
 })
+
+// VIEW PREV AND NEXT IMAGE\

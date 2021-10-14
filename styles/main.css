@@ -75,6 +75,7 @@ header .menu {
   min-height: 100vh;
   z-index: 5;
   padding: 5rem 0rem 0rem 1rem;
+  cursor: pointer;
 }
 
 header .menu ul {
@@ -113,6 +114,7 @@ header .left-align button {
   border: none;
   background-color: rgba(255, 255, 255, 0);
   z-index: 10;
+  cursor: pointer;
 }
 
 header .right-align {
@@ -183,11 +185,6 @@ main .image-preview button {
 
 main .image-preview button img {
   width: 25%;
-}
-
-main .image-preview .prev-btn {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
 }
 
 .price {
