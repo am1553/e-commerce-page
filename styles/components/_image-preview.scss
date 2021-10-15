@@ -31,8 +31,8 @@ main {
     position: relative;
     width: 100%;
     height: 300px;
+    overflow: hidden;
     .carousel-container {
-      background-color: red;
       height: 100%;
       position: relative;
       ul {
@@ -40,7 +40,7 @@ main {
         list-style: none;
         position: relative;
         height: 100%;
-        transition: transform 250ms ease-in;
+        transition: transform 350ms ease-in-out;
         li {
           position: absolute;
           top: 0;

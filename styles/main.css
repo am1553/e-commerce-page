@@ -149,10 +149,10 @@ main .image-preview {
   position: relative;
   width: 100%;
   height: 300px;
+  overflow: hidden;
 }
 
 main .image-preview .carousel-container {
-  background-color: red;
   height: 100%;
   position: relative;
 }
@@ -164,10 +164,10 @@ main .image-preview .carousel-container ul {
   list-style: none;
   position: relative;
   height: 100%;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
 }
 
 main .image-preview .carousel-container ul li {
