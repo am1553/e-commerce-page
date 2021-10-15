@@ -32,7 +32,7 @@ menuBtn.addEventListener("click", (e) => {
 })
 
 
-// *** code referenced -- https://www.youtube.com/watch?v=gBzsE0oieio
+// *** code reference -- https://www.youtube.com/watch?v=gBzsE0oieio
 
 // VIEW PREV AND NEXT IMAGE
 const imageList = document.querySelector(".carousel-images");
