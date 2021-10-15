@@ -1,11 +1,7 @@
-// // SELECTORS
+// BUTTONS
 const menuBtn = document.getElementById("menu_btn");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
-
-// ARRAYS
-const shoeImgList = ["../images/image-product-1.jpg", "../images/image-product-2.jpg", "../images/image-product-3.jpg", "../images/image-product-4.jpg"];
-
 
 // OPEN MENU AND APPLY OVERLAY EFFECT
 menuBtn.addEventListener("click", (e) => {
@@ -35,4 +31,37 @@ menuBtn.addEventListener("click", (e) => {
     }
 })
 
-// VIEW PREV AND NEXT IMAGE\
+
+// *** code referenced -- https://www.youtube.com/watch?v=gBzsE0oieio
+
+// VIEW PREV AND NEXT IMAGE
+const imageList = document.querySelector(".carousel-images");
+const slides = Array.from(imageList.children)
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + "px";
+}
+slides.forEach(setSlidePosition);
+
+
+const moveToSlide = (imageList, currentSlide, targetSlide) => {
+    imageList.style.transform = "translateX(-" + targetSlide.style.left + ")";
+    currentSlide.classList.remove("carousel-slide");
+    targetSlide.classList.add("carousel-slide");
+    
+}
+
+
+nextBtn.addEventListener("click", e => {
+    const currentSlide = imageList.querySelector(".carousel-slide");
+    const nextSlide = currentSlide.nextElementSibling;
+    // console.log(moveAmount);
+    moveToSlide(imageList, currentSlide, nextSlide);
+})
+prevBtn.addEventListener("click", e => {
+    const currentSlide = imageList.querySelector(".carousel-slide");
+    const prevSlide = currentSlide.previousElementSibling;
+    moveToSlide(imageList, currentSlide, prevSlide);
+})
+

@@ -1,27 +1,81 @@
+// main {
+//   .image-preview {
+//     background: url(../images/image-product-1.jpg) no-repeat;
+//     background-size: cover;
+//     background-position: 50% 50%;
+//     width: 100%;
+//     height: 300px;
+//     display: flex;
+//     flex-direction: row-reverse;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 0rem 1rem 0rem 1rem;
+
+//     button {
+//       border-radius: 50%;
+//       border: none;
+//       width: 2rem;
+//       height: 2rem;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       img {
+//         width: 25%;
+//       }
+//     }
+//   }
+// }
+
 main {
   .image-preview {
-    background: url(../images/image-product-1.jpg) no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+    position: relative;
     width: 100%;
     height: 300px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem 1rem 0rem 1rem;
-
+    .carousel-container {
+      background-color: red;
+      height: 100%;
+      position: relative;
+      ul {
+        display: flex;
+        list-style: none;
+        position: relative;
+        height: 100%;
+        transition: transform 250ms ease-in;
+        li {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
     button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .next-btn,
+    .prev-btn {
+      border: 0;
       border-radius: 50%;
-      border: none;
-      width: 2rem;
-      height: 2rem;
+      height: 30px;
+      width: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      img {
-        width: 25%;
-      }
+    }
+    .next-btn {
+      right: 0;
+      margin-right: 1rem;
+    }
+    .prev-btn {
+      left: 0;
+      margin-left: 1rem;
     }
   }
 }
