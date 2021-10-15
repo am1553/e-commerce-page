@@ -33,12 +33,31 @@
     </div>
     
     <div class="right-align">
-      <img src="images/icon-cart.svg" alt="">
-      <img src="images/image-avatar.png" alt="" class="user-avatar">
+      <button id="cardBtn"><img src="images/icon-cart.svg" alt=""></button>
+      <button id="userBtn"><img src="images/image-avatar.png" alt="" class="user-avatar"></button>
     </div>
   </header>
 
   <main>
+
+    <section class="shopping-cart">
+      <div class="cart-card">
+        <h3>Cart</h3>
+        <div class="divider-line"></div>
+        <p class="cart-text">Your cart is empty.</p>
+        <div class="item-added">
+          <img src="images/image-product-1-thumbnail.jpg" alt="" class="item-thumbnail">
+          <div class="item-text-wrapper">
+            <p>Fall Limited Edition Sneakers</p>
+            <div class="price-calculation">
+              <input type="text" id="pricecalc-input">
+            </div>
+          </div>
+          <img src="images/icon-delete.svg" alt="">
+        </div>
+        <button>Checkout</button>
+      </div>
+    </section>
 
     <section class="image-preview" id="image-box">
       <div class="carousel-container">
@@ -72,12 +91,13 @@
       </div>
       
       <div class="quantity">
-        <button><img src="images/icon-minus.svg" alt=""></button>
-        <p class="very-dark-blue-text">0</p>
-        <button><img src="images/icon-plus.svg" alt=""></button>
+        <form>
+          <button id="minus-btn"><img src="images/icon-minus.svg" alt=""></button>
+          <input type="number" id="number" value="0">
+          <button id="plus-btn"><img src="images/icon-plus.svg" alt=""></button>
+        </form>
       </div>
-      <button class="white-text add-items"><img src="images/icon-cart.svg" alt="">Add to cart</button>
-      
+      <button class="white-text add-items" id="add-to-cart"><img src="images/icon-cart.svg" alt="">Add to cart</button>
     </div>
   </main>
 

@@ -2,6 +2,9 @@
 const menuBtn = document.getElementById("menu_btn");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
+const cardBtn = document.getElementById("cardBtn");
+
+
 
 // OPEN MENU AND APPLY OVERLAY EFFECT
 menuBtn.addEventListener("click", (e) => {
@@ -32,9 +35,10 @@ menuBtn.addEventListener("click", (e) => {
 })
 
 
-// *** code reference -- https://www.youtube.com/watch?v=gBzsE0oieio
 
 // VIEW PREV AND NEXT IMAGE
+// *********** code reference -- https://www.youtube.com/watch?v=gBzsE0oieio
+
 const imageList = document.querySelector(".carousel-images");
 const slides = Array.from(imageList.children)
 const slideWidth = slides[0].getBoundingClientRect().width;
@@ -65,3 +69,57 @@ prevBtn.addEventListener("click", e => {
     moveToSlide(imageList, currentSlide, prevSlide);
 })
 
+// CART CARD
+// ************************************* empty cart
+cardBtn.addEventListener("click", () => {
+    const shoppingCart = document.querySelector(".shopping-cart");
+    if(shoppingCart.style.display == "none") {
+        shoppingCart.style.display = "flex";
+    } else {
+        shoppingCart.style.display = "none";
+    }
+})
+
+//ITEM QUANTITIY
+
+// *********** buttons
+let minusBtn = document.getElementById("minus-btn");
+let plusBtn = document.getElementById("plus-btn");
+let inputValue = document.getElementById("number");
+
+
+// ********** buttons eventlisteners
+plusBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let value = parseInt(inputValue.value);
+    value++;
+    inputValue.value = value;
+    let quantityCount = inputValue.value;
+    getQuantity(quantityCount);
+});
+
+minusBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let value = parseInt(inputValue.value);
+    value < 1 ? value = 1 : '0';
+    value--;
+    inputValue.value = value;
+    let quantityCount = inputValue.value;
+    getQuantity(quantityCount);
+});
+
+
+// ********** functions to get data in cart
+
+const cartInput = document.getElementById("pricecalc-input");
+const addToCartBtn = document.getElementById("add-to-cart");
+
+function getQuantity(quantityCount) {
+    addToCartBtn.addEventListener("click", () => {
+        let itemPrice = 125;
+        let quantity = quantityCount;
+        let totalPrice = "";
+        console.log(quantity);
+    
+    })
+}
