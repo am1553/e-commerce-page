@@ -145,4 +145,6 @@ addToCart.addEventListener("click", ()=> {
 const cartCheckoutBtn = document.getElementById("cart-checkout");
 cartCheckoutBtn.addEventListener("click", ()=> {
     checkoutItemAdded.style.display = "none";
+    cartCheckoutBtn.style.display = "none";
+    cartNoItemText.style.display = "flex";
 })

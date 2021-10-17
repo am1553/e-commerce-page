@@ -341,9 +341,7 @@ main {
 }
 
 main .shopping-cart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -357,7 +355,7 @@ main .shopping-cart .cart-card {
   z-index: 2;
   border-radius: 0.5rem;
   width: 95%;
-  height: 16rem;
+  min-height: 16rem;
 }
 
 main .shopping-cart .cart-card h3 {
@@ -378,13 +376,18 @@ main .shopping-cart .cart-card .cart-text {
   position: absolute;
   top: 55%;
   width: 100%;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .shopping-cart .cart-card .item-added {
   width: 90%;
   margin: auto;
-  margin-top: 2rem;
+  min-margin-top: 0.5rem;
   position: relative;
   height: 15vh;
   display: none;

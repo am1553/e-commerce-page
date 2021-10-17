@@ -1,7 +1,7 @@
 main {
   position: relative;
   .shopping-cart {
-    display: flex;
+    display: none;
     justify-content: center;
     width: 100%;
     .cart-card {
@@ -11,7 +11,7 @@ main {
       z-index: 2;
       border-radius: 0.5rem;
       width: 95%;
-      height: 16rem;
+      min-height: 16rem;
       h3 {
         font-weight: 700;
         font-size: 1rem;
@@ -28,13 +28,14 @@ main {
         position: absolute;
         top: 55%;
         width: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
       }
 
       .item-added {
         width: 90%;
         margin: auto;
-        margin-top: 2rem;
+        min-margin-top: 0.5rem;
         position: relative;
         height: 15vh;
         display: none;
