@@ -420,6 +420,25 @@ main .shopping-cart .cart-card .item-added .item-text-wrapper {
   padding-left: 1rem;
 }
 
+main .shopping-cart .cart-card .item-added .item-text-wrapper .checkout-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .shopping-cart .cart-card .item-added .item-text-wrapper #checkout-items {
+  padding-right: 0.5rem;
+}
+
+main .shopping-cart .cart-card .item-added .item-text-wrapper #total-cost {
+  font-weight: 700;
+  color: #1d2025;
+}
+
 main .shopping-cart button {
   width: 90%;
   margin: auto;

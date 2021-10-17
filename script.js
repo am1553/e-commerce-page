@@ -94,8 +94,9 @@ plusBtn.addEventListener("click", (e) => {
     let value = parseInt(inputValue.value);
     value++;
     inputValue.value = value;
-    let quantityCount = inputValue.value;
-    getQuantity(quantityCount);
+    let count = inputValue.value;
+    checkoutCart(count);
+    checkoutPrice(count);
 });
 
 minusBtn.addEventListener("click", (e) => {
@@ -104,22 +105,29 @@ minusBtn.addEventListener("click", (e) => {
     value < 1 ? value = 1 : '0';
     value--;
     inputValue.value = value;
-    let quantityCount = inputValue.value;
-    getQuantity(quantityCount);
+    let count = inputValue.value;
+    checkoutCart(count);
+    checkoutPrice(count);
 });
 
 
+
+
 // ********** functions to get data in cart
+const addToCart = document.getElementById("add-to-cart");
+const checkoutItems = document.getElementById("checkout-items");
+const totalCost = document.getElementById("total-cost");
+const price = 125.00;
 
-const cartInput = document.getElementById("pricecalc-input");
-const addToCartBtn = document.getElementById("add-to-cart");
 
-function getQuantity(quantityCount) {
-    addToCartBtn.addEventListener("click", () => {
-        let itemPrice = 125;
-        let quantity = quantityCount;
-        let totalPrice = "";
-        console.log(quantity);
+function checkoutCart(count) {
+    let quantity = count;
     
-    })
+    return checkoutItems.innerHTML = "$" + price.toFixed(2) + " " + "x" + " " + quantity;
+}
+
+function checkoutPrice(count) {
+    let quantity = count;
+
+    return totalCost.innerHTML = "$" + count * price;
 }
