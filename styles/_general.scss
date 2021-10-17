@@ -13,3 +13,14 @@ main {
     padding: 0rem 1rem 1rem;
   }
 }
+
+.hide {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba($color: white, $alpha: 0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}

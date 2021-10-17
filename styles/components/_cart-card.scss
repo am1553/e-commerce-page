@@ -4,6 +4,7 @@ main {
     display: none;
     justify-content: center;
     width: 100%;
+    z-index: 5;
     .cart-card {
       margin-top: 0.5rem;
       background: $white;

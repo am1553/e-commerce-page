@@ -71,13 +71,16 @@ prevBtn.addEventListener("click", e => {
 
 // --------------------------------------CART CARD
 // ************************************* empty cart
+const shoppingCart = document.querySelector(".shopping-cart");
 cardBtn.addEventListener("click", () => {
-    const shoppingCart = document.querySelector(".shopping-cart");
-    if(shoppingCart.style.display == "none") {
-        shoppingCart.style.display = "flex";
-    } else {
-        shoppingCart.style.display = "none";
-    }
+    // if(shoppingCart.style.display == "none") {
+    //     shoppingCart.style.display = "flex";
+    // } else {
+    //     shoppingCart.style.display = "none";
+    // }
+    shoppingCart.style.display = "flex";
+    shoppingCart.style.zIndex = "10";
+    hideDiv.style.display = "flex";
 })
 
 //------------------------------------ITEM QUANTITIY
@@ -148,3 +151,11 @@ cartCheckoutBtn.addEventListener("click", ()=> {
     cartCheckoutBtn.style.display = "none";
     cartNoItemText.style.display = "flex";
 })
+
+// HIDE WHEN CLICKED OUTSIDE
+const hideDiv = document.getElementsByClassName("hide")[0];
+
+function hide() {
+    hideDiv.style.display = "none";
+    shoppingCart.style.display = "none";
+}
