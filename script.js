@@ -72,7 +72,7 @@ prevBtn.addEventListener("click", e => {
 // --------------------------------------CART CARD
 // ************************************* empty cart
 const shoppingCart = document.querySelector(".shopping-cart");
-cardBtn.addEventListener("click", () => {
+cartBtn.addEventListener("click", () => {
     // if(shoppingCart.style.display == "none") {
     //     shoppingCart.style.display = "flex";
     // } else {
@@ -92,6 +92,8 @@ let inputValue = document.getElementById("number");
 
 
 // ********** buttons eventlisteners
+let itemCount = document.querySelector(".item-counter span");
+
 plusBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let value = parseInt(inputValue.value);
@@ -100,6 +102,7 @@ plusBtn.addEventListener("click", (e) => {
     let count = inputValue.value;
     checkoutCart(count);
     checkoutPrice(count);
+    itemCount.innerHTML = count;
 });
 
 minusBtn.addEventListener("click", (e) => {
@@ -111,6 +114,7 @@ minusBtn.addEventListener("click", (e) => {
     let count = inputValue.value;
     checkoutCart(count);
     checkoutPrice(count);
+    itemCount.innerHTML = count;
 });
 
 

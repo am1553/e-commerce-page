@@ -150,6 +150,35 @@ header .right-align .user-avatar {
   width: 65%;
 }
 
+header .right-align .cart-button {
+  position: relative;
+}
+
+header .right-align .cart-button .item-counter {
+  background-color: #ff7d1a;
+  width: 1.3rem;
+  height: 1rem;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .right-align .cart-button .item-counter span {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: white;
+}
+
 .overlay {
   display: none;
   background-color: black;
@@ -338,6 +367,7 @@ main .image-preview .prev-btn {
   font-weight: 700;
   border-radius: 0.5rem;
   border: none;
+  font-size: 1.125rem;
 }
 
 .add-items img {
