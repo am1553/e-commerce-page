@@ -19,11 +19,18 @@
       border: none;
       padding: 0.5rem;
       background-color: rgba($color: white, $alpha: 0);
+      cursor: pointer;
     }
     input {
       text-align: center;
       border: none;
       background-color: rgba($color: white, $alpha: 0);
+      outline: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   }
 }

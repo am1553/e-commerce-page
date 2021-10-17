@@ -42,9 +42,7 @@ body h4 {
 
 body {
   min-height: 100vh;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 
 main .container {
@@ -152,6 +150,7 @@ header .right-align .user-avatar {
 
 header .right-align .cart-button {
   position: relative;
+  cursor: pointer;
 }
 
 header .right-align .cart-button .item-counter {
@@ -162,9 +161,7 @@ header .right-align .cart-button .item-counter {
   top: 10%;
   right: 10%;
   border-radius: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -202,6 +199,7 @@ main .image-preview {
 main .image-preview .carousel-container {
   height: 100%;
   position: relative;
+  min-width: 100vw;
 }
 
 main .image-preview .carousel-container ul {
@@ -215,17 +213,18 @@ main .image-preview .carousel-container ul {
   transition: -webkit-transform 350ms ease-in-out;
   transition: transform 350ms ease-in-out;
   transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+  width: 100%;
 }
 
 main .image-preview .carousel-container ul li {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100%;
+  min-width: 100%;
 }
 
 main .image-preview .carousel-container ul li img {
-  min-width: 100vw;
+  width: 100vw;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -236,6 +235,7 @@ main .image-preview button {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
 }
 
 main .image-preview .next-btn,
@@ -343,12 +343,20 @@ main .image-preview .prev-btn {
   border: none;
   padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
 .quantity form input {
   text-align: center;
   border: none;
   background-color: rgba(255, 255, 255, 0);
+  outline: none;
+}
+
+.quantity form input::-webkit-outer-spin-button,
+.quantity form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .add-items {
@@ -368,6 +376,7 @@ main .image-preview .prev-btn {
   border-radius: 0.5rem;
   border: none;
   font-size: 1.125rem;
+  cursor: pointer;
 }
 
 .add-items img {
@@ -501,5 +510,12 @@ main .shopping-cart button {
   border-radius: 0.5rem;
   color: white;
   font-weight: 700;
+}
+
+@media screen and (min-width: 420px) {
+  main .image-preview .carousel-container ul li img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 /*# sourceMappingURL=main.css.map */

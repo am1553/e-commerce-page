@@ -58,16 +58,16 @@ header {
     }
     .cart-button {
       position: relative;
+      cursor: pointer;
       .item-counter {
         background-color: $orange-primary;
-
         width: 1.3rem;
         height: 1rem;
         position: absolute;
         top: 10%;
         right: 10%;
         border-radius: 0.5rem;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         span {

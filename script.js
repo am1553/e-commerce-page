@@ -3,8 +3,23 @@ const menuBtn = document.getElementById("menu_btn");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 const cardBtn = document.getElementById("cardBtn");
+let minusBtn = document.getElementById("minus-btn");
+let plusBtn = document.getElementById("plus-btn");
+let inputValue = document.getElementById("number");
 
-
+// SELECTORS
+const shoppingCart = document.querySelector(".shopping-cart");
+const itemCountDiv = document.querySelector(".item-counter");
+const itemCountSpan = document.querySelector(".item-counter span");
+const checkoutItems = document.getElementById("checkout-items");
+const totalCost = document.getElementById("total-cost");
+const addToCart = document.getElementById("add-to-cart");
+const checkoutItemAdded = document.querySelector(".item-added");
+const cartNoItemText = document.querySelector(".cart-text");
+const cartCheckoutBtn = document.getElementById("cart-checkout");
+const hideDiv = document.getElementsByClassName("hide")[0];
+// VARS
+const price = 125.00;
 
 // ------------------------OPEN MENU AND APPLY OVERLAY EFFECT
 menuBtn.addEventListener("click", (e) => {
@@ -71,28 +86,14 @@ prevBtn.addEventListener("click", e => {
 
 // --------------------------------------CART CARD
 // ************************************* empty cart
-const shoppingCart = document.querySelector(".shopping-cart");
 cartBtn.addEventListener("click", () => {
-    // if(shoppingCart.style.display == "none") {
-    //     shoppingCart.style.display = "flex";
-    // } else {
-    //     shoppingCart.style.display = "none";
-    // }
     shoppingCart.style.display = "flex";
     shoppingCart.style.zIndex = "10";
     hideDiv.style.display = "flex";
 })
 
 //------------------------------------ITEM QUANTITIY
-
-// *********** buttons
-let minusBtn = document.getElementById("minus-btn");
-let plusBtn = document.getElementById("plus-btn");
-let inputValue = document.getElementById("number");
-
-
 // ********** buttons eventlisteners
-let itemCount = document.querySelector(".item-counter span");
 
 plusBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -102,7 +103,7 @@ plusBtn.addEventListener("click", (e) => {
     let count = inputValue.value;
     checkoutCart(count);
     checkoutPrice(count);
-    itemCount.innerHTML = count;
+    itemCountSpan.innerHTML = count;
 });
 
 minusBtn.addEventListener("click", (e) => {
@@ -114,17 +115,10 @@ minusBtn.addEventListener("click", (e) => {
     let count = inputValue.value;
     checkoutCart(count);
     checkoutPrice(count);
-    itemCount.innerHTML = count;
+    itemCountSpan.innerHTML = count;
 });
 
-
-
-
 // ------------------------------------------ADD ITEMS TO CART
-const checkoutItems = document.getElementById("checkout-items");
-const totalCost = document.getElementById("total-cost");
-const price = 125.00;
-
 
 function checkoutCart(count) {
     let quantity = count;
@@ -139,25 +133,23 @@ function checkoutPrice(count) {
 }
 
 // ADD ITEMS CLICK EVENT
-const addToCart = document.getElementById("add-to-cart");
-const checkoutItemAdded = document.querySelector(".item-added");
-const cartNoItemText = document.querySelector(".cart-text");
+
 addToCart.addEventListener("click", ()=> {
     checkoutItemAdded.style.display = "flex";
     cartCheckoutBtn.style.display = "flex";
+    itemCountDiv.style.display = "flex";
     cartNoItemText.style.display = "none";
 })
 
 // REMOVE ITEMS CLICK EVENT
-const cartCheckoutBtn = document.getElementById("cart-checkout");
 cartCheckoutBtn.addEventListener("click", ()=> {
     checkoutItemAdded.style.display = "none";
     cartCheckoutBtn.style.display = "none";
+    itemCountDiv.style.display = "none";
     cartNoItemText.style.display = "flex";
 })
 
 // HIDE WHEN CLICKED OUTSIDE
-const hideDiv = document.getElementsByClassName("hide")[0];
 
 function hide() {
     hideDiv.style.display = "none";
