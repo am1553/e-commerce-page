@@ -11,7 +11,7 @@ main {
       z-index: 2;
       border-radius: 0.5rem;
       width: 95%;
-      // max-height: 50vh;
+      min-height: 40vh;
       h3 {
         font-weight: 700;
         font-size: 1rem;
@@ -29,7 +29,6 @@ main {
         top: 55%;
         width: 100%;
         text-align: center;
-        display: none;
       }
 
       .item-added {
@@ -38,7 +37,7 @@ main {
         margin-top: 2rem;
         position: relative;
         height: 15vh;
-        display: flex;
+        display: none;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -74,7 +73,7 @@ main {
       margin-bottom: 1rem;
       position: relative;
       height: 9vh;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       background-color: $orange-primary;

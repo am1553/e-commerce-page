@@ -355,6 +355,7 @@ main .shopping-cart .cart-card {
   z-index: 2;
   border-radius: 0.5rem;
   width: 95%;
+  min-height: 40vh;
 }
 
 main .shopping-cart .cart-card h3 {
@@ -376,7 +377,6 @@ main .shopping-cart .cart-card .cart-text {
   top: 55%;
   width: 100%;
   text-align: center;
-  display: none;
 }
 
 main .shopping-cart .cart-card .item-added {
@@ -385,9 +385,7 @@ main .shopping-cart .cart-card .item-added {
   margin-top: 2rem;
   position: relative;
   height: 15vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -444,9 +442,7 @@ main .shopping-cart button {
   margin-bottom: 1rem;
   position: relative;
   height: 9vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

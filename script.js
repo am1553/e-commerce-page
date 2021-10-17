@@ -6,7 +6,7 @@ const cardBtn = document.getElementById("cardBtn");
 
 
 
-// OPEN MENU AND APPLY OVERLAY EFFECT
+// ------------------------OPEN MENU AND APPLY OVERLAY EFFECT
 menuBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const menuList = document.getElementById("menu");
@@ -36,7 +36,7 @@ menuBtn.addEventListener("click", (e) => {
 
 
 
-// VIEW PREV AND NEXT IMAGE
+// -----------------------------VIEW PREV AND NEXT IMAGE
 // *********** code reference -- https://www.youtube.com/watch?v=gBzsE0oieio
 
 const imageList = document.querySelector(".carousel-images");
@@ -69,7 +69,7 @@ prevBtn.addEventListener("click", e => {
     moveToSlide(imageList, currentSlide, prevSlide);
 })
 
-// CART CARD
+// --------------------------------------CART CARD
 // ************************************* empty cart
 cardBtn.addEventListener("click", () => {
     const shoppingCart = document.querySelector(".shopping-cart");
@@ -80,7 +80,7 @@ cardBtn.addEventListener("click", () => {
     }
 })
 
-//ITEM QUANTITIY
+//------------------------------------ITEM QUANTITIY
 
 // *********** buttons
 let minusBtn = document.getElementById("minus-btn");
@@ -113,8 +113,7 @@ minusBtn.addEventListener("click", (e) => {
 
 
 
-// ********** functions to get data in cart
-const addToCart = document.getElementById("add-to-cart");
+// ------------------------------------------ADD ITEMS TO CART
 const checkoutItems = document.getElementById("checkout-items");
 const totalCost = document.getElementById("total-cost");
 const price = 125.00;
@@ -128,6 +127,22 @@ function checkoutCart(count) {
 
 function checkoutPrice(count) {
     let quantity = count;
-
+    
     return totalCost.innerHTML = "$" + count * price;
 }
+
+// ADD ITEMS CLICK EVENT
+const addToCart = document.getElementById("add-to-cart");
+const checkoutItemAdded = document.querySelector(".item-added");
+const cartNoItemText = document.querySelector(".cart-text");
+addToCart.addEventListener("click", ()=> {
+    checkoutItemAdded.style.display = "flex";
+    cartCheckoutBtn.style.display = "flex";
+    cartNoItemText.style.display = "none";
+})
+
+// REMOVE ITEMS CLICK EVENT
+const cartCheckoutBtn = document.getElementById("cart-checkout");
+cartCheckoutBtn.addEventListener("click", ()=> {
+    checkoutItemAdded.style.display = "none";
+})
